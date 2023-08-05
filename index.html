@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+
+    <!-- Bootstrap Framework -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fontawesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg p-4">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center column-gap-2" href="#">
+                <img src="images/logo.png" class="w-100" alt="">
+                <div class="d-flex flex-column">
+                    <h1 class="fs-6">Weather</h1>
+                    <span>tagling goes here</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live Cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container py-5">
+            <div class="row gy-5 rounded">
+                <div class="col-12 p-0">
+                    <form action="#" class="position-relative">
+                        <input id="locationField" type="text" placeholder="Enter your email to subscribe"
+                            class="form-control rounded-pill">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+            <div id="forecast" class="row mt-5">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-8">
+                    <form action="#" class="position-relative">
+                        <input type="text" placeholder="Enter your email to subscribe"
+                            class="form-control rounded-pill">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-icons h-100 d-flex align-items-center justify-content-md-end">
+                        <ul class="list-unstyled d-flex column-gap-2 mb-0">
+                            <li>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
