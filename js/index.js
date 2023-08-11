@@ -30,13 +30,30 @@ function getUserLocation(position) {
 }
 
 
-async function getForecast(location) {
+/* async function getForecast(location) {
     var weatherRequest = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=83e5a7c8b53b44ac82501616230408%20&q=${location}&days=3`);
     if (weatherRequest.ok && weatherRequest.status != 400) {
         var weatherInfo = await weatherRequest.json();
         displayCurrentDay(weatherInfo);
         displayAnotherDays(weatherInfo);
     }
+} */
+
+async function getForecast(location) {
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=83e5a7c8b53b44ac82501616230408%20&q=${location}&days=3`)
+        .then((weatherRequest) => {
+            if (weatherRequest.ok && weatherRequest.status != 400) {
+                return weatherRequest.json();
+            } else {
+                throw new Error("Invalid City");
+            }
+        })
+        .then((weatherInfo) => {
+            displayCurrentDay(weatherInfo);
+            displayAnotherDays(weatherInfo);
+        }).catch(error => {
+            console.log(error);
+        })
 }
 
 function displayCurrentDay(weatherInfo) {
