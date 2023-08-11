@@ -30,8 +30,8 @@ function getUserLocation(position) {
 }
 
 
-async function getForecast(countryName) {
-    var weatherRequest = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=83e5a7c8b53b44ac82501616230408%20&q=${countryName}&days=3`);
+async function getForecast(location) {
+    var weatherRequest = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=83e5a7c8b53b44ac82501616230408%20&q=${location}&days=3`);
     if (weatherRequest.ok && weatherRequest.status != 400) {
         var weatherInfo = await weatherRequest.json();
         displayCurrentDay(weatherInfo);
